@@ -23,7 +23,7 @@ pipeline {
 
           withCredentials([file(credentialsId: 'key', variable: 'key')]){
               sh """
-                  gcloud auth activate-service-account manag-service-acc@lithe-quest-368003.iam.gserviceaccount.com --key-file ${key}
+                  gcloud auth activate-service-account manag-service-acc@lithe-quest-368003.iam.gserviceaccount.com -- key-file ${key}
         
                 """
             }
