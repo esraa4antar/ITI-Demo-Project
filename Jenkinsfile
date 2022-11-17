@@ -27,8 +27,7 @@ pipeline {
         
                 """
             }
-        }
-
+        
 
             withCredentials([file(credentialsId: 'esraa/kube', variable: 'KUBECONFIG')]) {
               sh """
